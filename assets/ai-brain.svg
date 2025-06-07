@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00FF00;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF00FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FF00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FFFF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main brain outline -->
+  <path d="M150,50 C120,50 95,70 90,100 C85,110 85,120 90,130 C95,140 100,150 110,160 C120,170 130,175 140,180 C145,185 150,190 155,195 C160,200 165,205 170,200 C175,195 180,185 185,180 C195,175 205,170 215,160 C225,150 230,140 235,130 C240,120 240,110 235,100 C230,70 205,50 175,50 C170,50 165,50 160,50 C155,50 152,50 150,50 Z" 
+        fill="none" 
+        stroke="url(#brainGradient)" 
+        stroke-width="3" 
+        filter="url(#glow)"
+        opacity="0.9"/>
+  
+  <!-- Inner brain structure -->
+  <path d="M130,80 C140,75 150,75 160,80 C170,85 175,95 180,105 C185,115 185,125 180,135 C175,145 165,150 155,155 C150,160 145,165 140,160 C135,155 130,145 125,135 C120,125 120,115 125,105 C130,95 130,85 130,80 Z" 
+        fill="none" 
+        stroke="#00FFFF" 
+        stroke-width="2" 
+        opacity="0.7"/>
+  
+  <!-- Neural network connections -->
+  <g stroke="url(#neuralGradient)" stroke-width="1.5" fill="none" filter="url(#innerGlow)">
+    <!-- Central neural hub -->
+    <circle cx="150" cy="120" r="8" fill="#00FFFF" opacity="0.8"/>
+    
+    <!-- Neural connections -->
+    <line x1="150" y1="120" x2="120" y2="90">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="120" x2="180" y2="90">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="120" x2="110" y2="130">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="120" x2="190" y2="130">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="120" x2="130" y2="160">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="120" x2="170" y2="160">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Secondary neural nodes -->
+    <circle cx="120" cy="90" r="4" fill="#00FF00" opacity="0.7">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="90" r="4" fill="#00FF00" opacity="0.7">
+      <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="110" cy="130" r="4" fill="#00FF00" opacity="0.7">
+      <animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="130" r="4" fill="#00FF00" opacity="0.7">
+      <animate attributeName="r" values="4;6;4" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="130" cy="160" r="4" fill="#00FF00" opacity="0.7">
+      <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="160" r="4" fill="#00FF00" opacity="0.7">
+      <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Data flow particles -->
+  <g fill="#FF00FF" opacity="0.8">
+    <circle cx="100" cy="100" r="2">
+      <animateMotion dur="4s" repeatCount="indefinite">
+        <path d="M0,0 Q50,-20 100,0 T200,0"/>
+      </animateMotion>
+    </circle>
+    <circle cx="200" cy="140" r="2">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <path d="M0,0 Q-50,20 -100,0 T-200,0"/>
+      </animateMotion>
+    </circle>
+    <circle cx="150" cy="80" r="2">
+      <animateMotion dur="5s" repeatCount="indefinite">
+        <path d="M0,0 Q0,50 0,100 T0,200"/>
+      </animateMotion>
+    </circle>
+  </g>
+  
+  <!-- Digital matrix overlay -->
+  <g font-family="Orbitron, monospace" font-size="8" fill="#00FFFF" opacity="0.4">
+    <text x="60" y="70">01</text>
+    <text x="220" y="70">10</text>
+    <text x="60" y="200">11</text>
+    <text x="220" y="200">00</text>
+    <text x="90" y="40">AI</text>
+    <text x="180" y="220">ML</text>
+  </g>
+  
+  <!-- Circuit patterns -->
+  <g stroke="#00FF00" stroke-width="1" fill="none" opacity="0.5">
+    <rect x="80" y="60" width="4" height="4"/>
+    <line x1="84" y1="62" x2="100" y2="62"/>
+    <rect x="100" y="60" width="4" height="4"/>
+    
+    <rect x="196" y="140" width="4" height="4"/>
+    <line x1="196" y1="142" x2="180" y2="142"/>
+    <rect x="176" y="140" width="4" height="4"/>
+    
+    <rect x="120" y="200" width="4" height="4"/>
+    <line x1="122" y1="200" x2="122" y2="185"/>
+    <rect x="120" y="181" width="4" height="4"/>
+  </g>
+  
+  <!-- Brain waves -->
+  <path d="M50,250 Q80,240 110,250 T170,250 T230,250" 
+        stroke="#FF00FF" 
+        stroke-width="2" 
+        fill="none" 
+        opacity="0.6"
+        filter="url(#glow)">
+    <animate attributeName="d" 
+             values="M50,250 Q80,240 110,250 T170,250 T230,250;
+                     M50,250 Q80,260 110,250 T170,250 T230,250;
+                     M50,250 Q80,240 110,250 T170,250 T230,250" 
+             dur="3s" 
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Processing indicator -->
+  <g transform="translate(150,120)">
+    <circle r="15" fill="none" stroke="#00FFFF" stroke-width="2" opacity="0.3"/>
+    <circle r="15" fill="none" stroke="#00FFFF" stroke-width="2" stroke-dasharray="10,5" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="2s"
+        repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- AI text -->
+  <text x="150" y="280" text-anchor="middle" font-family="Orbitron, monospace" font-size="16" fill="url(#brainGradient)" opacity="0.8">
+    ARTIFICIAL INTELLIGENCE
+  </text>
+</svg>

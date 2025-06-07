@@ -1,0 +1,14 @@
+{
+  "name": "feedback-server",
+  "version": "1.0.0",
+  "description": "Backend server for handling feedback submissions",
+  "main": "feedback-server.js",
+  "scripts": {
+    "start": "node feedback-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5"
+  }
+}

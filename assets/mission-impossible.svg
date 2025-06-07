@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF00FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00FFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF00FF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer ring with cyberpunk styling -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#neonGradient)" stroke-width="3" filter="url(#glow)" opacity="0.8"/>
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#00FFFF" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Target crosshairs -->
+  <line x1="20" y1="100" x2="40" y2="100" stroke="#FF00FF" stroke-width="2" filter="url(#glow)"/>
+  <line x1="160" y1="100" x2="180" y2="100" stroke="#FF00FF" stroke-width="2" filter="url(#glow)"/>
+  <line x1="100" y1="20" x2="100" y2="40" stroke="#FF00FF" stroke-width="2" filter="url(#glow)"/>
+  <line x1="100" y1="160" x2="100" y2="180" stroke="#FF00FF" stroke-width="2" filter="url(#glow)"/>
+  
+  <!-- Central play symbol with cyberpunk twist -->
+  <polygon points="85,70 85,130 125,100" fill="url(#neonGradient)" filter="url(#glow)" opacity="0.9"/>
+  <polygon points="85,70 85,130 125,100" fill="none" stroke="#00FFFF" stroke-width="2"/>
+  
+  <!-- Digital noise lines -->
+  <line x1="50" y1="60" x2="70" y2="60" stroke="#00FF00" stroke-width="1" opacity="0.7"/>
+  <line x1="130" y1="140" x2="150" y2="140" stroke="#00FF00" stroke-width="1" opacity="0.7"/>
+  <line x1="60" y1="140" x2="80" y2="140" stroke="#00FF00" stroke-width="1" opacity="0.7"/>
+  <line x1="120" y1="60" x2="140" y2="60" stroke="#00FF00" stroke-width="1" opacity="0.7"/>
+  
+  <!-- Corner brackets -->
+  <path d="M30,30 L30,50 M30,30 L50,30" stroke="#FF00FF" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M170,30 L170,50 M170,30 L150,30" stroke="#FF00FF" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M30,170 L30,150 M30,170 L50,170" stroke="#FF00FF" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M170,170 L170,150 M170,170 L150,170" stroke="#FF00FF" stroke-width="2" fill="none" opacity="0.8"/>
+  
+  <!-- Inner tech details -->
+  <rect x="65" y="85" width="4" height="4" fill="#00FFFF" opacity="0.8"/>
+  <rect x="75" y="115" width="4" height="4" fill="#00FFFF" opacity="0.8"/>
+  <rect x="125" y="85" width="4" height="4" fill="#00FFFF" opacity="0.8"/>
+  <rect x="115" y="115" width="4" height="4" fill="#00FFFF" opacity="0.8"/>
+  
+  <!-- Scanning effect (animated) -->
+  <line x1="100" y1="10" x2="100" y2="190" stroke="#00FF00" stroke-width="1" opacity="0.3">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 100 100"
+      to="360 100 100"
+      dur="4s"
+      repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Pulse effect -->
+  <circle cx="100" cy="100" r="5" fill="#FF00FF" opacity="0.8">
+    <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Mission text (stylized) -->
+  <text x="100" y="210" text-anchor="middle" font-family="Orbitron, monospace" font-size="12" fill="#00FFFF" opacity="0.7">
+    MISSION_IMPOSSIBLE
+  </text>
+</svg>
