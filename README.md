@@ -14,8 +14,8 @@ A modern, cyberpunk-themed portfolio website showcasing your skills and projects
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
-cd CreativePortfolioGlitch
+git clone (https://github.com/VidhyashreeX/website)
+cd website
 ```
 
 2. Install backend dependencies:
